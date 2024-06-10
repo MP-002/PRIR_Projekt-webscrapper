@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/results.css') }}">
+    <title>Projekt - 20493</title>
+</head>
+<body>
+    <h1 onclick="location.href='/'">PROJEKT - 20493</h1>
+    <div>
+    <h2>Wyniki</h2>
+    
+    {% for url in urls %}
+        <h3>adres strony</h3>
+        <h6 onclick="location.href='{{url}}'">{{url}}</h6>
+        {% for target in targets %}
+            <h3>{{target}}</h3>
+            <span>
+                {% for result in results %}
+                {% if (results.index(result))==binary(urls.index(url),targets.index(target),targets|length) %}
+                    {% for res in result %}
+                        {% if target=="hiperłącza" %}
+                            <a href="{{res}}" target="_blank">{{res}}</a><br>
+                        {% elif target=="obrazy" %}
+                            <img src="{{res}}" alt="{{res}}" onclick="location.href='{{res}}'">
+                        {% elif target=="wideo" %}
+                            <p>{{ res }}</p>
+                            <video preload="none" width="200" height="300" autoplay="" loop="" src="{{res}}"></video>
+                        {% else %}
+                            <p>{{ res }}</p>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+                {% endfor %}    
+            </span>
+        {% endfor %}
+        
+    {% endfor %}
+</div>
+    
+</body>
+</html>

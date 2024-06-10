@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/results.css') }}">
+    <title>Projekt - 20493</title>
+</head>
+<body>
+    <h1 onclick="location.href='/'">PROJEKT - 20493</h1>
+    <div>
+    <h2>Historia</h2>
+    
+    {% for i in range(urls|length) %}
+                 <h3>adresy stron</h3>
+                <h6>
+                {% for u in urls[i] %}
+                    {{u}}
+                {% endfor %}
+                </h6>
+                <h3>szukane elementy</h3>
+                <h6>
+                    {% for t in targets[i] %}
+                        {{t}}
+                    {% endfor %}
+                </h6>
+                <h3>Wyniki</h3>
+                <span>    
+                    {% for res in results[i] %}
+                                 
+                        <p>{{ res }}</p>
+                                       
+                    {% endfor %}
+                </span> 
+    {% endfor %}
+</div>
+    
+</body>
+</html>

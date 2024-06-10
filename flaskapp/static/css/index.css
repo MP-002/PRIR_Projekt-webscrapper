@@ -1,0 +1,149 @@
+body {
+    background-image: url('../images/bg.png');
+    background-size:auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    background-color: rgba(255, 255, 255, 0.71);
+    color:rgb(255, 230, 0);
+    text-shadow: rgb(205, 126, 0) 1px 0 6px;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 3px solid rgb(255, 157, 0);
+}
+
+#his {
+    display: block;
+    position: fixed;
+    border-top: 3px solid rgb(255, 157, 0);
+    border-bottom: none;
+    font-size: medium;
+    width:auto;
+    left:1%;
+    right:1%;
+    bottom:1%;
+}
+
+#his:hover {
+    cursor: pointer;
+    background-color: white;
+}
+
+h2,#b1,#b2 {
+    display: inline-flex;
+}
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color:rgb(0, 0, 0);
+    text-shadow: rgb(255, 157, 0) 1px 0 1px;
+    text-align: center;
+    padding: 10px;
+    font-size:large;
+    /*border-bottom: 1px solid rgb(255, 157, 0);*/
+}
+
+div {
+    background-color: rgba(255, 255, 255, 0.71);
+    display: block;
+    width: 400px;
+    height: auto;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid rgb(255, 157, 0);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+p {
+    border: 1px solid rgb(255, 157, 0);
+    margin:0;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+#targets {
+    text-transform: uppercase;
+}
+#b1 {
+    color: red;
+    font-size:x-small;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+#b1:hover {
+background-color: white;
+font-weight: bold;
+}
+
+#b2 {
+    color: red;
+    font-size:x-small;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+#b2:hover {
+background-color: white;
+font-weight: bold;
+}
+
+#url {
+    width: 300px;
+    height: 40px;
+    border-radius: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: monospace;
+    color: rgb(27, 27, 27);
+    background-color: rgb(254, 251, 243);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#url:hover {
+    background-color: white;
+}
+
+label:hover {
+    color: gold;
+}
+
+input.submit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 70px;
+    height: 30px;
+    text-transform: uppercase;
+    border: solid 1px gold;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+input.submit:hover {
+    font-size: 16px;
+    color: gold;
+    background-color: rgb(243, 246, 246);
+}
+
+#find {
+    margin-top: 15px;
+    width: 20%;
+    height: 30px;
+    text-transform: uppercase;
+    border: solid 1px gold;
+    border-radius: 8px;
+    text-shadow: gold 0px 0 1px;
+}
+
+#find:hover {
+    color: goldenrod;
+    background-color: white;
+}

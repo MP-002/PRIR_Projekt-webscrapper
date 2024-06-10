@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <title>Projekt - 20493</title>
+</head>
+<body>
+    <h1>PROJEKT - 20493</h1>
+    <div>
+    <form action="/" method="post">
+        <!--<label for="url">Adres strony:</label>-->
+        <input type="text" id="url" name="url" value="http://www.sw.com/en?"><br>
+        <label for="h1">Nagłówek 1 </label><input type="checkbox" id="h1" name="h1" ><br>
+        <label for="h2">Nagłówek 2 </label><input type="checkbox" id="h2" name="h2"><br>
+        <label for="h3">Nagłówek 3 </label><input type="checkbox" id="h3" name="h3"><br>
+        <label for="h4">Nagłówek 4 </label><input type="checkbox" id="h4" name="h4"><br>
+        <label for="h5">Nagłówek 5 </label><input type="checkbox" id="h5" name="h5"><br>
+        <label for="h6">Nagłówek 6 </label><input type="checkbox" id="h6" name="h6"><br>
+        <label for="a">Hiperłącze </label><input type="checkbox" id="a" name="a"><br>
+        <label for="img">Obraz </label><input type="checkbox" id="img" name="img"><br>
+        <label for="p">Paragraf </label><input type="checkbox" id="p" name="p"><br>
+        <label for="span">Linia tekstu </label><input type="checkbox" id="span" name="span"><br>
+        <label for="video">Wideo </label><input type="checkbox" id="video" name="video"><br>
+        <input type="submit" class="submit" value="Dodaj">
+    </form>
+    
+    {% if urls %}
+    <h2>Adresy stron</h2>
+    <button id="b1" onclick="location.href='/clearurl'">Usuń</button>
+    <p>
+        {% for url in urls %}
+           {{ url }}<br>
+        {% endfor %}
+    </p>
+    {% endif %}
+    {% if targets %}
+    <h2>Szukane dane</h2><button id="b2" onclick="location.href='/cleartarget'">Usuń</button>
+    <p id="targets">
+        {% for target in targets %}
+           {{ target }}, 
+        {% endfor %}
+    </p>
+    {% endif %}
+    {% if urls %}
+        {% if targets %}
+        <button id="find" onclick="location.href='/results'">szukaj</button>
+        {% endif %}
+    {% endif %}
+</div>
+<h1 id="his" onclick="location.href='/history'">Historia</h1>
+</body>
+</html>
